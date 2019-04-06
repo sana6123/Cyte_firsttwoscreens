@@ -10,10 +10,12 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Button;
 
+public class startup_Activity extends AppCompatActivity {
 
-public class MainActivity extends AppCompatActivity {
+//declare the variable
 
     private TextView mTextMessage;
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -38,30 +40,19 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.employer_signuppg);
 
-       // mTextMessage = (TextView) findViewById(R.id.message);
-        //BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation_home);
-        //navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        final Button button = (Button) findViewById(R.id.employee_startupbutton);
-        button.setOnClickListener(new View.OnClickListener() {
+//button for employer
+        final Button button2 = (Button) findViewById(R.id.employer_startupbuttton);
+        button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // your handler code here
-                startActivity(new Intent(MainActivity.this, Employee_Profile_Activity.class));
+                startActivity(new Intent(startup_Activity.this, startup_signup_button.class));
 
             }
         });
-
-
 //declare the value to the specific button basically the name you have saved the button at
-    final Button  button1 = (Button) findViewById(R.id.employer_startupbuttton);
-            button1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    startActivity(new Intent(MainActivity.this, Employer_Profile_Activity.class));
-                }
-            });
+
 
     }
-
 }
